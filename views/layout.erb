@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title><%= @title %></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/css/crossbones.css" rel="stylesheet">  
+  <link href="/css/theme.css" rel="stylesheet">
+
+	<link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+
+	<script src="/js/jquery-1.7.1.min.js"></script> 
+	<script src="/js/jquery.flexslider-min.js"></script>
+	<script src="/js/app.js"></script>  	
+
+</head>
+<body>
+	<div class="container">
+
+	      <header class="sixteen columns">
+         <h1 id="logo" class="textcenter">⎈</h1>
+         <h4 id="sitename" class="textcenter">NEPTUNE</h4>  
+      </header>
+
+
+      <hr class="sixteen columns no-margin">
+      <nav id="navigation" class="sixteen columns">         
+      	<div id="centeredmenu" class="">
+      		<ul id="" class="">
+	      	  <li><a href="" title="">HOME</a></li>
+	      		<li><a href="" title="">ABOUT</a></li>
+	      		<li><a href="" title="">PORTFOLIO</a>
+	      			<ul>
+	      				<li><a href="" title="">MERCURY</a></li>
+	      				<li><a href="" title="">VENUS</a></li>
+	      				<li><a href="" title="">EARTH</a></li>
+	      				<li><a href="" title="">MARS</a></li>
+	      				<li><a href="" title="">JUPITER</a></li>
+	      			</ul><!-- / -->
+	      		</li>
+	      		<li><a href="" title="">BLOG</a></li>
+	      		<li><a href="" title="">CONTACT</a></li>
+      	</ul><!-- / -->
+      	</div><!-- / -->
+      </nav>
+
+
+		<%= yield %>
+
+		<footer class="row">
+			<div id="" class="four columns">
+				
+			</div><!-- / -->
+			<div id="" class="twelve columns">
+				
+			</div><!-- / -->
+		</footer>
+	</div>
+
+
+</body>
+</html>

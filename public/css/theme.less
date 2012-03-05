@@ -1,0 +1,280 @@
+@background: #ddd;
+@primary: #454545;
+@secondary: #444;
+@highlight: #cb5f3a;
+@hover: @highlight;
+@border: 1px;
+
+@bgpattern: '/images/bg_texture2.jpg';
+
+
+@pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==";
+@pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIHWPYunnrfyBggNEMyByQIFwGpwoAg6IwyYr14kYAAAAASUVORK5CYII=";
+
+@headingfont: "Hammersmith One";
+@bodyfont: "Hammersmith One";
+
+/****************/
+
+@import "crossbones/reset.less";
+@import "crossbones/baseline.less";
+@import "crossbones/grid2.less";
+@import "crossbones/nav-centre.less";
+@import "crossbones/buttons.less";
+@import "crossbones/forms.less";
+@import "crossbones/glyphs.less";
+@import "crossbones/flexslider.less";
+
+
+
+
+
+
+
+
+.no-margin {
+  margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .no-margin {
+    margin-bottom: 20px;
+  }
+}
+
+
+.purple {
+  background: black;
+  border-radius: 2px;
+  outline: 1px solid #ccc;
+}
+
+.text-anim-1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.img-anim-1xxx {
+  margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+.frame {
+  overflow: hidden;
+}
+
+#navigation {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+
+
+a:hover {
+  text-decoration: none;
+}
+
+.photogrid a:before {
+    content: "+";
+    font-family: 'WebSymbolsRegular';
+    display: block;
+    font-size: 34px;
+    line-height: 1em;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+ 
+    color: @highlight;
+    font-weight: bold;
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 200;
+
+    margin: -0.5em 0 0 -0.5em;
+
+}
+
+
+.photogrid img {
+  max-width: 94%;
+  padding: 3%;
+  background: #fff;
+  outline: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px #6b6b6b;
+  z-index: 300;
+  position: relative;
+  -webkit-transition: box-shadow linear 0.2s;
+  -moz-transition: box-shadow linear 0.2s;
+  -ms-transition: box-shadow linear 0.2s;
+  -o-transition: box-shadow linear 0.2s;
+  transition: box-shadow linear 0.2s;
+}
+
+
+
+.photogrid img:hover {
+  box-shadow: none;
+}
+
+.photogrid a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+
+footer {
+  height: 100px;
+}
+
+
+
+/*nav {
+  background:url(@pattern) @primary;
+}*/
+
+body {
+  background-color: @background;
+  font-family: @bodyfont;
+  background:url(@bgpattern) @background scroll;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  color: @primary;
+  font-family: @headingfont;
+  font-weight: bold;
+}
+
+p, li, a {
+  color: @secondary;
+  font-family: @bodyfont;
+}
+
+
+
+.divider {
+  border: none;
+  margin-bottom: @gutter * 2;
+  background:url(@pattern) transparent scroll;
+  padding-top: 10px;
+  border-radius: 2px;
+}
+
+.spacer {
+  margin-bottom: 20px;
+}
+
+
+
+.article {
+  margin-bottom: 0em;
+}
+
+.article a.button {
+  margin: -1em 0 2em 0;
+}
+
+
+.article-aside {
+  text-align: right;
+}
+
+.article-aside small{
+  display: block;
+}
+
+
+
+
+.textcenter {
+  text-align: center;
+}
+
+.reverse {
+	background: @highlight;
+	color: @background;
+	padding: 2px 8px 0px 8px;
+	-moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: @highlight;
+  text-shadow: 1px 1px 0px @background, 2px 2px 0px @secondary ;
+  letter-spacing: 2px;
+}
+
+.highlighter {
+  color: @highlight;
+}
+
+
+
+#logo {
+  margin: 30px 0 10px 0;
+}
+
+#sitename {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.clock {
+  font-family: 'WebSymbolsRegular';
+  color: @highlight;
+  font-size: 16px;
+  float: right;
+  padding: 1px 0 0 12px;
+}
+
+.comment-bubble {
+  font-family: 'WebSymbolsRegular';
+  color: @highlight;
+  font-size: 13px;
+  float: right;
+  padding: 1px 0 0 12px;
+}
+
+.calltoaction {
+  display: inline;
+  padding-left: 9px;
+  color: @highlight;
+}
+
+.readmore {
+  padding: 0 0 0 7px;
+  color: @highlight;
+  font-size: .85em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
