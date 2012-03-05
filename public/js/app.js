@@ -2,11 +2,11 @@ $(document).ready(function() {
 
 
 
-$.fn.vAlign = function() {
+$.fn.vAlign = function(mult, div) {
   return this.each(function(){
   var ah = $(this).outerHeight();
   var ph = $(this).parent().height();
-  var mh = Math.floor(ph-ah) * 0.5;
+  var mh = ((Math.floor(ph-ah) * 0.5) * mult) / div;
 
   //console.log('ah: ' + ah + ', ph: ' + ph + ', mh: ' + mh);
   
@@ -23,7 +23,7 @@ $.fn.vAlign = function() {
 
 var centerText = (function(){
   $('ul.slides').each(function(){ 
-    $(this).find('div.infotext').first().vAlign().fadeIn(1200);
+    $(this).find('div.infotext').first().vAlign(1.5, 3).fadeIn(1200);
   }); 
 })();
 
@@ -84,7 +84,7 @@ var centerText = (function(){
       start: function(slider){
       },
       before: function(slider){            
-        $(slider).find('div.text-anim-1').stop().vAlign().css({ opacity: '0' }).delay(700).animate({   
+        $(slider).find('div.text-anim-1').stop().vAlign(1, 1).css({ opacity: '0' }).delay(700).animate({   
           opacity: '1'
         }, 600);       
       },
