@@ -334,15 +334,14 @@ small {
 
   margin-top: 1em;
   margin-bottom: 0em;
-  color: #444444;
+  color: #6f6f6f;
 }
 hr {
   height: 0px;
   border: none;
-  border-top: 1px solid #959595;
-  border-bottom: 1px solid #eee;
+  border-top: 1px dotted #555555;
   margin-top: 0em;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7em;
 }
 /* #Skeleton Grid
 ================================================== */
@@ -864,41 +863,28 @@ CENTERED MENU
 #centeredmenu ul li a {
   display: block;
   margin: 0;
-  padding: 1.1em 1em .8em 1em;
+  padding: 1em;
   line-height: 1em;
   text-decoration: none;
-  color: #454545;
+  color: #555555;
   font-weight: bold;
   transition: background 2s linear;
   -webkit-transition: background 0.2s ease-out;
-  border-radius: 2px;
 }
 #centeredmenu ul li.active a {
-  color: #dddddd;
-  background: #454545;
+  color: #ffffff;
+  background: #555555;
 }
 #centeredmenu ul li a:hover {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIHWPYunnrfyBggNEMyByQIFwGpwoAg6IwyYr14kYAAAAASUVORK5CYII=") #dddddd fixed;
-  color: #454545;
-  -webkit-border-top-left-radius: 2px;
-  -webkit-border-top-right-radius: 2px;
-  -moz-border-radius-topleft: 2px;
-  -moz-border-radius-topright: 2px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  background: transparent;
+  color: #6f6f6f;
 }
 #centeredmenu ul li:hover a,
 #centeredmenu ul li.hover a {
   /* This line is required for IE 6 and below */
 
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIHWPYunnrfyBggNEMyByQIFwGpwoAg6IwyYr14kYAAAAASUVORK5CYII=") repeat #dddddd fixed;
-  color: #454545;
-  -webkit-border-top-left-radius: 2px;
-  -webkit-border-top-right-radius: 2px;
-  -moz-border-radius-topleft: 2px;
-  -moz-border-radius-topright: 2px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  background: transparent;
+  color: #6f6f6f;
 }
 /* Submenu items */
 #centeredmenu ul ul {
@@ -915,7 +901,7 @@ CENTERED MENU
   /* width of the drop-down menus */
   min-width: 180px;
   z-index: 1000;
-  border-top: 50px solid transparent;
+  border-top: 37px solid transparent;
 }
 #centeredmenu ul ul li {
   left: auto;
@@ -926,10 +912,12 @@ CENTERED MENU
 
   clear: left;
   width: 100%;
-  margin-top: 2px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIHWPYunnrfyBggNEMyByQIFwGpwoAg6IwyYr14kYAAAAASUVORK5CYII=") repeat #dddddd fixed;
-  border-radius: 2px;
-  border-bottom: 0;
+  margin-top: 0px;
+  padding: 4px 0 2px 0;
+  background: #ffffff;
+  border-bottom: 1px dotted #555555;
+  border-top: none;
+  opacity: .85;
 }
 #centeredmenu ul ul li a,
 #centeredmenu ul li.active li a,
@@ -941,11 +929,10 @@ CENTERED MENU
   /* resets the bold set for the top level menu items */
 
   background: transparent;
-  color: #454545;
+  color: #555555;
   line-height: 1em;
   /* overwrite line-height value from top menu */
 
-  border-radius: 2px;
 }
 #centeredmenu ul ul li a:hover,
 #centeredmenu ul li.active ul li a:hover,
@@ -953,8 +940,7 @@ CENTERED MENU
 #centeredmenu ul li.hover ul li a:hover {
   /* This line is required for IE 6 and below */
 
-  color: #454545;
-  background: #cb5f3a;
+  color: #cb5f3a;
 }
 /* Flip the last submenu so it stays within the page */
 #centeredmenu ul ul.last {
@@ -998,10 +984,10 @@ CENTERED MENU
   #centeredmenu ul li a {
     display: block;
     margin: 0;
-    padding: 1em 1em .8em 1em;
+    padding: 1em;
     line-height: 1em;
     text-decoration: none;
-    color: #454545;
+    color: #555555;
     font-weight: bold;
   }
   /* Submenu items */
@@ -1030,11 +1016,11 @@ BUTTONS
 ---------------------------------------------------- */
 .button,
 #searchsubmit {
-  background: #444444;
+  background: #6f6f6f;
   display: inline-block;
   text-align: center;
   padding: 10px 34px 10px;
-  color: #dddddd;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
@@ -1134,7 +1120,7 @@ form label {
   cursor: pointer;
   margin-bottom: 4px;
   padding-left: 2px;
-  color: #454545;
+  color: #555555;
 }
 input,
 textarea,
@@ -1148,9 +1134,9 @@ textarea {
   width: 100%;
   min-height: 36px;
   /*  max-width: 420px;*/
-  background: url(../images/input-bg.png) 0px 0px #dddddd;
-  color: #454545;
-  border: 1px solid #454545;
+  background: url(../images/input-bg.png) 0px 0px #ffffff;
+  color: #555555;
+  border: 1px solid #555555;
   font-size: 1em;
   padding: 4px 5px 4px;
   box-sizing: border-box;
@@ -1167,7 +1153,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  background: url(../images/input-bg.png) 0px -1px #dddddd;
+  background: url(../images/input-bg.png) 0px -1px #ffffff;
   outline: none !important;
   border-color: #cb5f3a;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #cb5f3a;
@@ -1182,21 +1168,21 @@ textarea.oversize {
 /* Text input and textarea, disabled */
 input[disabled],
 textarea[disabled] {
-  background-color: #dddddd;
+  background-color: #ffffff;
 }
 /* Inlined Label Style */
 input.placeholder,
 textarea.placeholder {
-  color: #444444;
+  color: #6f6f6f;
 }
 select {
-  background: #dddddd;
-  color: #454545;
+  background: #ffffff;
+  color: #555555;
   width: auto;
   min-width: 300px;
   padding: 20px;
   font-size: 1em;
-  border: 1px solid #454545;
+  border: 1px solid #555555;
   height: 2.2em;
 }
 select:focus {
@@ -1222,7 +1208,7 @@ textarea.expand {
 /* Fieldsets */
 form fieldset {
   padding: 9px 9px 2px 9px;
-  border: solid 1px #444444;
+  border: solid 1px #6f6f6f;
   margin: 9px 0 9px 0;
 }
 /* Inlined Radio & Checkbox */
@@ -1292,9 +1278,10 @@ small.error {
 }
 .glyphs {
   font-family: 'WebSymbolsRegular';
-  font-size: 1.4286em;
   display: inline;
   color: #cb5f3a;
+  padding-right: 9px;
+  vertical-align: baseline;
 }
 /*--------------------------------------------------
 ----------------------------------------------------
@@ -1384,7 +1371,7 @@ html[xmlns] .slides {
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-  color: #444444;
+  color: #6f6f6f;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   font-size: 14px;
   line-height: 18px;
@@ -1435,7 +1422,7 @@ html[xmlns] .slides {
   text-align: center ;
 }
 .flex-control-nav li {
-  margin: 0px 9px 0px 9px;
+  margin: 5px 9px 0px 9px;
   display: inline-block;
   zoom: 1;
   *display: inline;
@@ -1446,11 +1433,14 @@ html[xmlns] .slides {
   display: block;
   cursor: pointer;
   text-indent: -9999px;
-  background: #444444;
+  background: #6f6f6f;
   -webkit-border-radius: 18px;
 }
 .flex-control-nav li a.active {
   background: #cb5f3a;
+}
+#tagline {
+  margin: 20px auto;
 }
 .no-margin {
   margin-bottom: 0px;
@@ -1478,7 +1468,8 @@ html[xmlns] .slides {
 }
 #navigation {
   margin-bottom: 0;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  font-size: .9em;
 }
 a:hover {
   text-decoration: none;
@@ -1501,12 +1492,13 @@ a:hover {
   margin: -0.5em 0 0 -0.5em;
 }
 .photogrid img {
-  max-width: 94%;
-  padding: 3%;
+  max-width: 100%;
+  padding: 0%;
   background: #fff;
-  outline: 1px solid #ccc;
-  border-radius: 2px;
-  box-shadow: 3px 3px 3px #6b6b6b;
+  outline: 1px solid #aaaaaa;
+  /*  border-radius: 2px;
+  box-shadow: 3px 3px 3px #6b6b6b;*/
+
   z-index: 300;
   position: relative;
   -webkit-transition: box-shadow linear 0.2s;
@@ -1530,9 +1522,9 @@ footer {
   background:url(@pattern) @primary;
 }*/
 body {
-  background-color: #dddddd;
+  background-color: #ffffff;
   font-family: "Hammersmith One";
-  background: url('/images/bg_texture2.jpg') #dddddd scroll;
+  background: url("") #ffffff scroll;
 }
 h1,
 h2,
@@ -1540,20 +1532,20 @@ h3,
 h4,
 h5,
 h6 {
-  color: #454545;
+  color: #555555;
   font-family: "Hammersmith One";
   font-weight: bold;
 }
 p,
 li,
 a {
-  color: #444444;
+  color: #6f6f6f;
   font-family: "Hammersmith One";
 }
 .divider {
   border: none;
   margin-bottom: 40px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIHWPYunnrfyBggNEMyByQIFwGpwoAg6IwyYr14kYAAAAASUVORK5CYII=") transparent scroll;
+  background: url("") transparent scroll;
   padding-top: 10px;
   border-radius: 2px;
 }
@@ -1577,7 +1569,7 @@ a {
 }
 .reverse {
   background: #cb5f3a;
-  color: #dddddd;
+  color: #ffffff;
   padding: 2px 8px 0px 8px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1586,17 +1578,17 @@ a {
 }
 .highlight {
   color: #cb5f3a;
-  text-shadow: 1px 1px 0px #dddddd, 2px 2px 0px #444444;
+  text-shadow: 1px 1px 0px #ffffff, 2px 2px 0px #6f6f6f;
   letter-spacing: 2px;
 }
 .highlighter {
   color: #cb5f3a;
 }
 #logo {
-  margin: 30px 0 10px 0;
+  margin: 60px 0 0px 0;
 }
 #sitename {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .clock {
   font-family: 'WebSymbolsRegular';
@@ -1614,7 +1606,6 @@ a {
 }
 .calltoaction {
   display: inline;
-  padding-left: 9px;
   color: #cb5f3a;
 }
 .readmore {

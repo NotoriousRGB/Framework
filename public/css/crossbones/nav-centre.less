@@ -36,39 +36,26 @@ CENTERED MENU
 #centeredmenu ul li a {
    display:block;
    margin:0;
-   padding: 1.1em 1em .8em 1em;
+   padding: 1em;
    line-height:1em;
    text-decoration:none;
    color:@primary;
    font-weight:bold;
    transition: background 2s linear;
    -webkit-transition: background .2s ease-out;
-   border-radius: 2px;
 }
 #centeredmenu ul li.active a {
    color:@background;
    background:@primary;
 }
 #centeredmenu ul li a:hover {
-   background:url(@pattern) @background fixed;
-   color: @primary;
-   -webkit-border-top-left-radius: 2px;
-   -webkit-border-top-right-radius: 2px;
-   -moz-border-radius-topleft: 2px;
-   -moz-border-radius-topright: 2px;
-   border-top-left-radius: 2px;
-   border-top-right-radius: 2px;
+   background: transparent;
+   color: @secondary;
 }
 #centeredmenu ul li:hover a,
 #centeredmenu ul li.hover a { /* This line is required for IE 6 and below */
-   background:url(@pattern) repeat @background fixed;
-   color:@primary;
-      -webkit-border-top-left-radius: 2px;
-   -webkit-border-top-right-radius: 2px;
-   -moz-border-radius-topleft: 2px;
-   -moz-border-radius-topright: 2px;
-   border-top-left-radius: 2px;
-   border-top-right-radius: 2px;
+   background: transparent;
+   color:@secondary;
 }
 
 /* Submenu items */
@@ -76,23 +63,26 @@ CENTERED MENU
    display:none; /* Sub menus are hidden by default */
    position:absolute;
    top: 0em;
-   left:0;
+   left: 0;
    right:auto; /*resets the right:50% on the parent ul */
    width:auto; /* width of the drop-down menus */  
    min-width: 180px;
    z-index:1000;
-   border-top: 50px solid transparent;
+   border-top: 37px solid transparent;
 }
 #centeredmenu ul ul li {
-  left:auto;  /*resets the left:50% on the parent li */
-  margin:0; /* Reset the 1px margin from the top menu */
-  clear:left;
-  width:100%;
-  margin-top: 2px;
-  background:url(@pattern) repeat @background fixed;
-  border-radius: 2px;
-  border-bottom: 0;
+   left:auto;  /*resets the left:50% on the parent li */
+   margin:0; /* Reset the 1px margin from the top menu */
+   clear:left;
+   width:100%;
+   margin-top: 0px;
+   padding: 4px 0 2px 0;
+   background: @background;
+   border-bottom: 1px dotted @primary;
+   border-top: none;
+   opacity: .85;  
 }
+
 
 #centeredmenu ul ul li a,
 #centeredmenu ul li.active li a,
@@ -102,15 +92,15 @@ CENTERED MENU
    background: transparent;
    color: @primary;
    line-height:1em; /* overwrite line-height value from top menu */
-   border-radius: 2px;
+   
 }
 
 #centeredmenu ul ul li a:hover,
 #centeredmenu ul li.active ul li a:hover,
 #centeredmenu ul li:hover ul li a:hover,
 #centeredmenu ul li.hover ul li a:hover { /* This line is required for IE 6 and below */
-   color: @primary;
-   background: @highlight;
+   color: @highlight;
+
 }
 
 /* Flip the last submenu so it stays within the page */
@@ -148,8 +138,8 @@ CENTERED MENU
 }
 #centeredmenu ul li a {
    display:block;
-   margin:0;
-   padding: 1em 1em .8em 1em;
+   margin: 0;
+   padding: 1em;
    line-height:1em;
    text-decoration:none;
    color:@primary;

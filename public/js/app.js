@@ -2,11 +2,11 @@ $(document).ready(function() {
 
 
 
-$.fn.vAlign = function(mult, div) {
+$.fn.vAlign = function() {
   return this.each(function(){
-  var ah = $(this).outerHeight();
-  var ph = $(this).parent().height();
-  var mh = ((Math.floor(ph-ah) * 0.5) * mult) / div;
+  var ah = $(this).innerHeight();
+  var ph = $(this).parent().innerHeight();
+  var mh = Math.ceil(ph-ah) / 5;
 
   //console.log('ah: ' + ah + ', ph: ' + ph + ', mh: ' + mh);
   
@@ -21,11 +21,11 @@ $.fn.vAlign = function(mult, div) {
   });
 };
 
-var centerText = (function(){
-  $('ul.slides').each(function(){ 
-    $(this).find('div.infotext').first().vAlign(1.5, 3).fadeIn(1200);
-  }); 
-})();
+// var centerText = (function(){
+//   $('ul.slides').each(function(){ 
+//     $(this).find('div.infotext').first().vAlign(1, 1).fadeIn(1200);
+//   }); 
+// })();
 
 
 
@@ -82,11 +82,12 @@ var centerText = (function(){
       prevText: "<",       
       nextText: ">", 
       start: function(slider){
+        $(slider).find('div.text-anim-1').vAlign().hide().fadeIn(1000);
       },
       before: function(slider){            
-        $(slider).find('div.text-anim-1').stop().vAlign(1, 1).css({ opacity: '0' }).delay(700).animate({   
+        $(slider).find('div.text-anim-1').stop().css({ opacity: '0' }).delay(700).animate({   
           opacity: '1'
-        }, 600);       
+        }, 600);
       },
       after: function(slider){
       }
