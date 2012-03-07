@@ -1463,11 +1463,8 @@ html[xmlns] .slides {
 .flex-control-nav li a.active {
   background: #cb5f3a;
 }
-img {
+.slides img {
   margin-bottom: 20px;
-}
-.row > img {
-  padding: 0px 10px;
 }
 #tagline {
   margin: 20px auto;
