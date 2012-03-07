@@ -1,7 +1,26 @@
 @background: #fff;
-@primary: #555;
+@primary: #444;
 @secondary: @primary * 1.3;
 @highlight: #cb5f3a;
+
+@hover: @highlight;
+@border: @background / 1.5;
+
+@pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQIHWPYunnrfyBggNEMyByQIFwGpwoAg6IwyYr14kYAAAAASUVORK5CYII=";
+
+
+
+@headingfont: "Hammersmith One";
+@bodyfont: "Hammersmith One";
+
+
+
+
+
+/*@background: #141414;
+@primary: #fff;
+@secondary: @primary * 1.3;
+@highlight: teal;
 @hover: @highlight;
 @border: @background / 1.5;
 
@@ -10,7 +29,7 @@
 
 
 @headingfont: "Hammersmith One";
-@bodyfont: "Hammersmith One";
+@bodyfont: "Hammersmith One";*/
 
 /****************/
 
@@ -24,6 +43,14 @@
 @import "crossbones/flexslider.less";
 
 
+img {
+  margin-bottom: 20px;
+}
+
+.row > img {
+  padding: 0px 10px;
+}
+
 
 
 #tagline {
@@ -35,18 +62,37 @@
   margin-bottom: 0px;
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .no-margin {
     margin-bottom: 20px;
+  }
+
+  .sidetext {
+    text-align: center;
+    border-bottom: 1px dotted @primary;
+    padding-top: 0px;
+    padding-bottom: 12px;
+    font-size: 120%;
+  }
+
+  .heading {
+    border-bottom: 1px dotted @primary;
+    padding-top: 0px;
+    padding-bottom: 12px;
+  }
+
+  .mobile-align {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .slides img {
+    margin-top: 20px;
   }
 }
 
 
-.purple {
-  background: black;
-  border-radius: 2px;
-  outline: 1px solid #ccc;
-}
+
 
 .text-anim-1 {
   text-align: center;
@@ -65,13 +111,13 @@
 
 
 .frame {
-  overflow: hidden;
+
 }
 
 #navigation {
   margin-bottom: 0;
   letter-spacing: 1px;
-  font-size: .9em;
+  font-size: .95em;
 }
 
 
@@ -106,8 +152,7 @@ a:hover {
 .photogrid img {
   max-width: 100%;
   padding: 0%;
-  background: #fff;
-  outline: 1px solid @border;
+  outline: 1px dotted @primary;
 /*  border-radius: 2px;
   box-shadow: 3px 3px 3px #6b6b6b;*/
   z-index: 300;
@@ -133,7 +178,7 @@ a:hover {
 
 
 footer {
-  height: 100px;
+  height: 40px;
 }
 
 
@@ -145,8 +190,11 @@ footer {
 body {
   background-color: @background;
   font-family: @bodyfont;
-  background:url(@pattern) @background scroll;
+  background: @background;
+  margin: 0;
 }
+
+
 
 h1, h2, h3, h4, h5 ,h6 {
   color: @primary;
@@ -154,10 +202,16 @@ h1, h2, h3, h4, h5 ,h6 {
   font-weight: bold;
 }
 
-p, li, a {
+a:hover {
+  color: @primary;
+}
+
+p, li {
   color: @secondary;
   font-family: @bodyfont;
 }
+
+
 
 
 
@@ -170,7 +224,7 @@ p, li, a {
 }
 
 .spacer {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 
@@ -179,18 +233,14 @@ p, li, a {
   margin-bottom: 0em;
 }
 
-.article a.button {
-  margin: -1em 0 2em 0;
-}
+
 
 
 .article-aside {
   text-align: right;
 }
 
-.article-aside small{
-  display: block;
-}
+
 
 
 
@@ -200,12 +250,17 @@ p, li, a {
 }
 
 .reverse {
-	background: @highlight;
+	background: @primary;
 	color: @background;
-	padding: 2px 8px 0px 8px;
-	-moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+	padding: 3px 8px 0px 8px;
+  font-weight: bold;
+}
+
+.reverse2 {
+  background: @background;
+  color: @secondary;
+  border: 1px dotted @primary;
+  padding: 3px 8px 0px 8px;
   font-weight: bold;
 }
 
@@ -227,27 +282,20 @@ p, li, a {
 
 #sitename {
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 
 
 
 
-.clock {
+.clock, .comment-bubble {
   font-family: 'WebSymbolsRegular';
   color: @highlight;
-  font-size: 16px;
-  float: right;
-  padding: 1px 0 0 12px;
+  padding-left: 12px;
 }
 
-.comment-bubble {
-  font-family: 'WebSymbolsRegular';
-  color: @highlight;
-  font-size: 13px;
-  float: right;
-  padding: 1px 0 0 12px;
-}
+
 
 .calltoaction {
   display: inline;

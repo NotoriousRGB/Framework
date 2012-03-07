@@ -50,12 +50,12 @@ CENTERED MENU
 }
 #centeredmenu ul li a:hover {
    background: transparent;
-   color: @secondary;
+   color: @highlight;
 }
 #centeredmenu ul li:hover a,
 #centeredmenu ul li.hover a { /* This line is required for IE 6 and below */
    background: transparent;
-   color:@secondary;
+   color:@highlight;
 }
 
 /* Submenu items */
@@ -68,7 +68,7 @@ CENTERED MENU
    width:auto; /* width of the drop-down menus */  
    min-width: 180px;
    z-index:1000;
-   border-top: 37px solid transparent;
+   border-top: 40px solid transparent;
 }
 #centeredmenu ul ul li {
    left:auto;  /*resets the left:50% on the parent li */
@@ -81,6 +81,10 @@ CENTERED MENU
    border-bottom: 1px dotted @primary;
    border-top: none;
    opacity: .85;  
+}
+
+#centeredmenu ul ul li:last-child {
+   border-bottom: none;
 }
 
 
@@ -142,8 +146,11 @@ CENTERED MENU
    padding: 1em;
    line-height:1em;
    text-decoration:none;
-   color:@primary;
    font-weight:bold;
+}
+#centeredmenu ul li a:hover {
+   color:@background;
+   background: @primary;
 }
 
 
